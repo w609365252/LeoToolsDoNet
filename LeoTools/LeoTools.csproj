@@ -31,14 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\齐牙保校园推广\新氧H5\XinYang\packages\aliyun-net-sdk-core.1.5.3\lib\net45\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>lib\Aliyun.OSS.dll</HintPath>
+    </Reference>
     <Reference Include="CsharpHttpHelper, Version=1.9.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\CsharpHttpHelper.1.9.0.1\lib\net40\CsharpHttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Authenticator, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\VisaFreeSystem\VisaFreeSystem\packages\GoogleAuthenticator.1.2.1\lib\net45\Google.Authenticator.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>lib\Interop.MSScriptControl.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\NLog.4.6.6\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
@@ -55,13 +71,29 @@
     <Reference Include="QRCoder, Version=1.3.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\QRCoder.1.3.6\lib\net40\QRCoder.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\齐牙保校园推广\新氧H5\XinYang\packages\Serilog.2.5.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Exceptions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fc5550082a9c642c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\齐牙保校园推广\新氧H5\XinYang\packages\Serilog.Exceptions.4.0.0\lib\net45\Serilog.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\..\工作\项目\齐牙保校园推广\新氧H5\XinYang\packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\工作\项目\微信小程序\报名工具\SignUpTools\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,18 +108,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\SystemCache.cs" />
+    <Compile Include="AI\BaiDu\BaiDuOrc.cs" />
+    <Compile Include="AI\FeiFei\FeiFeiApi.cs" />
+    <Compile Include="AI\FeiFei\FeiFeiOrc.cs" />
+    <Compile Include="Cache\CacheFactory.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\SystemCache\Cache.cs" />
+    <Compile Include="Common\GoogleAuthen.cs" />
     <Compile Include="Common\JsonHelper.cs" />
     <Compile Include="Common\LeoUtils.cs" />
     <Compile Include="Common\XMLHelper.cs" />
+    <Compile Include="DataTypeExtend\ConfigHelper.cs" />
+    <Compile Include="DataTypeExtend\DataCache.cs" />
+    <Compile Include="DataTypeExtend\DataTablePlugins.cs" />
+    <Compile Include="DataTypeExtend\DateTimePlugins.cs" />
+    <Compile Include="DataTypeExtend\DynamicLinqExpressions.cs" />
+    <Compile Include="DataTypeExtend\IEnumerablePlugins.cs" />
+    <Compile Include="DataTypeExtend\ObjectToObject.cs" />
+    <Compile Include="DataTypeExtend\StringPlugins.cs" />
+    <Compile Include="EncryptionDecryption\Base64.cs" />
+    <Compile Include="EncryptionDecryption\C_MD5.cs" />
+    <Compile Include="EncryptionDecryption\Easy.cs" />
+    <Compile Include="EncryptionDecryption\MD5.cs" />
+    <Compile Include="EncryptionDecryption\TripleDES.cs" />
+    <Compile Include="Enum\CommonEnum.cs" />
     <Compile Include="Excel\NPOIHelper.cs" />
     <Compile Include="Extension\CommonExtension.cs" />
     <Compile Include="Extension\ListExtension.cs" />
     <Compile Include="Extension\PagerExtension.cs" />
     <Compile Include="Extension\StringExtension.cs" />
-    <Compile Include="Miniprogram\MiniprogramApiHelper.cs" />
+    <Compile Include="FileHelper\FileHelper.cs" />
+    <Compile Include="FileHelper\ImageHelper.cs" />
+    <Compile Include="FileHelper\JavascriptHelper.cs" />
+    <Compile Include="FileHelper\VideoHelper.cs" />
+    <Compile Include="FileHelper\WebBrowserHelper.cs" />
+    <Compile Include="Miniprogram\Config.cs" />
+    <Compile Include="Miniprogram\Login.cs" />
+    <Compile Include="Miniprogram\Order.cs" />
+    <Compile Include="Miniprogram\SendMsg.cs" />
+    <Compile Include="Miniprogram\VMModel\MiniAESDecryptResult.cs" />
+    <Compile Include="Miniprogram\VMModel\MiniLoginResult.cs" />
+    <Compile Include="NLog\LogerManager.cs" />
+    <Compile Include="OSS\BucketType.cs" />
+    <Compile Include="OSS\OSSClientManager.cs" />
+    <Compile Include="ParamsException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMS\AliSMS.cs" />
+    <Compile Include="SMS\SendSMS.cs" />
+    <Compile Include="Validation\DecimalAttribute.cs" />
+    <Compile Include="Validation\DecimalInAttribute.cs" />
+    <Compile Include="Validation\EmailAttribute.cs" />
+    <Compile Include="Validation\EnumIntAttribute.cs" />
+    <Compile Include="Validation\IntAttribute.cs" />
+    <Compile Include="Validation\IntInAttribute.cs" />
+    <Compile Include="Validation\LicensePlateAttribute.cs" />
+    <Compile Include="Validation\LongAttribute.cs" />
+    <Compile Include="Validation\MaxAttribute.cs" />
+    <Compile Include="Validation\MinAttribute.cs" />
+    <Compile Include="Validation\NegativeAttribute.cs" />
+    <Compile Include="Validation\NumberAttribute.cs" />
+    <Compile Include="Validation\PhoneAttribute.cs" />
+    <Compile Include="Validation\StringByteLengthAttribute.cs" />
+    <Compile Include="Validation\StringEmptyAttribute.cs" />
+    <Compile Include="Validation\StringLengthAttribute.cs" />
     <Compile Include="Web\LeoHttpHelper.cs" />
+    <Compile Include="Web\WebHelper.cs" />
+    <Compile Include="ZXing\ZXingHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

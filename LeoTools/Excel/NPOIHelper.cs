@@ -229,6 +229,26 @@ namespace Utils
             return accountList;
         }
 
+        public static List<string[]> InputExcel(Stream stream, out string errorMsg)
+        {
+            //excel文件路径
+            List<string[]> accountList = new List<string[]>();
+            errorMsg = "";
+            //获取到工作簿
+            try
+            {
+                var workFile = new HSSFWorkbook(stream);
+                //获取行信息
+                accountList = NPOIExcelHelper.ReadLines(workFile.GetSheetAt(0), 0, 0, 0);
+                NPOIExcelHelper.CloseWorkbook(workFile);
+            }
+            catch (Exception ex)
+            {
+                errorMsg = "请关闭打开的Excel再进行导入";
+            }
+            return accountList;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -274,6 +294,8 @@ namespace Utils
                     }
                     rowNum++;
                 }
+                var path = Path.GetDirectoryName(exportPath);
+                if (!Directory.Exists(path)) Directory.CreateDirectory(path);
                 //写入文件流              地址(完整路径)          创建          写
                 var fs = new FileStream(exportPath, FileMode.Create, FileAccess.Write);
                 //写入

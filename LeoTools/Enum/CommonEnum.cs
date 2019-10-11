@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeoTools.Cache
+namespace LeoTools.CommonEnum
 {
-    public class SystemCache
+    public enum PathEnum
     {
-        
+        //本地
+        Local = 0,
+        //远程
+        Remote = 1
     }
 }

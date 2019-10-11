@@ -22,3 +22,13 @@ E:\李涛\资源\LeoTools\LeoTools\obj\Release\LeoTools.csproj.CoreCompileInputs
 E:\李涛\资源\LeoTools\LeoTools\obj\Release\LeoTools.csproj.CopyComplete
 E:\李涛\资源\LeoTools\LeoTools\obj\Release\LeoTools.dll
 E:\李涛\资源\LeoTools\LeoTools\obj\Release\LeoTools.pdb
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Aliyun.OSS.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Google.Authenticator.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\NLog.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\NLog.xml
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\aliyun-net-sdk-core.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Serilog.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Serilog.Exceptions.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Serilog.Sinks.File.dll
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Serilog.xml
+E:\李涛\资源\LeoTools\LeoTools\bin\Release\Serilog.Sinks.File.xml

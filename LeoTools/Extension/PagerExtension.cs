@@ -16,6 +16,7 @@ namespace LeoTools.Extension
             return list.Skip((pageFliter.PageIndex - 1) * pageFliter.PageSize).Take(pageFliter.PageSize).ToList();
         }
     }
+
     public class PageFliter
     {
         public int PageSize { get; set; }
